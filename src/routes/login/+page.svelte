@@ -28,4 +28,15 @@
     {#if isLoading}
         <div class="mt-4 text-lg text-blue-500">Loading...</div>
     {/if}
+
+    {#if 
+    !isLoading && !formVisible}
+    <div class="fixed">
+        <div class="flex flex-col items-center" in:fade={{ duration: 1000 }}>
+            <h1 class="text-3xl font-bold text-blue-500">Welcome {username}!</h1>
+            <p class="mt-4 text-lg">You are now logged in.</p>
+        </div>
+    </div>
+        {/if}
+
 </div>
